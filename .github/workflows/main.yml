@@ -44,4 +44,5 @@ jobs:
         cpu: 0.5
         memory: 0.5
         location: 'northeurope'
-        environment-variables: ASPNETCORE_ENVIRONMENT=Production
+        environment-variables: ASPNETCORE_ENVIRONMENT=Production GITHUB__SHA=${{ github.sha }}
+
