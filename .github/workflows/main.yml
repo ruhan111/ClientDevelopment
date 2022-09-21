@@ -13,3 +13,10 @@ jobs:
       uses: azure/login@v1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Login to Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: identityserveracr2.azurecr.io
+        username: IdentityServerACR2
+        password: ${{ secrets.REGISTRY_PASSWORD }}
